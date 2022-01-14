@@ -1,0 +1,13 @@
+<tr 
+    bgcolor="{% if loop.index % 2 == 0 %} #a9a9a9 {% else %} #ffffff {% endif %}"
+    style="color:{% if loop.index == 1 %} #FF00FF {% else %} #000000 {% endif %}"
+>
+    <td>{{ loop.index }}</td>
+    <td>{{ name }}</td>
+    <td>{{ data|date("m/d/Y") }}</td>
+    <td><a 
+        href="{{ path('editable', { 'id':loop.index }) }}" 
+        style="color:{% if loop.index == 1 %} #FF00FF {% else %} #000000 {% endif %}" 
+        >Editable
+    </td>
+</tr>
